@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sunu_task/core/constants/app_colors.dart';
 import 'package:sunu_task/core/constants/app_strings.dart';
-import 'package:sunu_task/models/OnboardingItem.dart';
+import 'package:sunu_task/models/onboardingItem.dart';
 import 'package:sunu_task/screens/home/home_screen.dart';
 import 'package:sunu_task/services/storage_service.dart';
 

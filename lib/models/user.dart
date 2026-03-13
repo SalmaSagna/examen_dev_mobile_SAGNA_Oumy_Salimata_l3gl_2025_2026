@@ -7,7 +7,7 @@ class User {
  final String id;
 
  /// Nom complet de l'utilisateur
- final String name;
+ final String name; //final pour rendre mes modèles immutables, pas modifiable, pour modifier on cree un autre objet et on utilise copyWith
 
  final String email;
 
@@ -42,8 +42,8 @@ class User {
    return User(
        id: id ?? this.id,
        name: name ?? this.name,
-       email: email ?? this.name,
-       password: password ?? this.name,
+       email: email ?? this.email,
+       password: password ?? this.password,
        avatar: avatar ?? this.avatar,
        createdAt: createdAt ?? this.createdAt
    );
@@ -67,7 +67,8 @@ class User {
  /**
   * Créer un utilisateur à l'aide du constructeur factory depuis un Map
   */
- factory User.fromMap(Map<String, dynamic> map) {
+ factory User.fromMap(Map<String, dynamic> map) {//User.fromMap permet de transformer le map en un véritable objet User
+          //dynamic: désactive la vérification du type pour cette variable, on verra au moment de l'exécution ce qu'elle contient
    return User(
        id: map['id'] as String,
        name: map['name'] as String,
